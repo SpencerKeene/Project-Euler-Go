@@ -21,11 +21,6 @@ func main() {
 	fmt.Println(max)
 }
 
-func largestPalindrome() int {
-	
-	panic("No palindrome exists.")
-}
-
 func isPalindrome(x int) bool {
 	return x == reverse(x)
 }
