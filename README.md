@@ -1,4 +1,5 @@
 # Project-Euler-Go
+Recently I have gained a lot of interest in the language Go. To learn the language, I am taking it upon myself to complete as many Project Euler problems as possible in Go, researching different elements of the language as they prove useful.
 
 ## Project Euler
 Project Euler is a website containing hundreds of math problems designed for people to solve using their own computer programs. These problems are very similar to LeetCode problems except they are based on mathematical concepts rather than programming interviews.
