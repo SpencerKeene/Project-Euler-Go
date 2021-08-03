@@ -39,14 +39,14 @@ func main() {
 }
 
 func countFactors(num int) (count int) {
-	sqrt := int(math.Sqrt(float64(num)))
-	for i := 1; i < sqrt; i++ {
+	sqrt := math.Sqrt(float64(num))
+	for i := 1; i <= int(sqrt); i++ {
 		if num % i == 0  {
 			count += 2
 		}
 	}
-	if num / sqrt == sqrt {
-		count++
+	if sqrt == float64(int(sqrt)) {
+		count--
 	}
 	return
 }
