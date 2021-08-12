@@ -51,16 +51,16 @@ func d(n int) (sum int) {
 
 func getProperDivisors(n int) (properDivisors []int) {
 	sqrt := math.Sqrt(float64(n))
-	for i := 1; i < int(sqrt); i++ {
+	properDivisors = []int{1}
+
+	for i := 2; i <= int(sqrt); i++ {
 		if n % i == 0 {
-			properDivisors = append(properDivisors, i)
+			properDivisors = append(properDivisors, i, n / i)
 		}
 	}
+	
 	if sqrt == float64(int(sqrt)) {
-		properDivisors = append(properDivisors, int(sqrt))
-	}
-	for i := len(properDivisors)-1; i > 0; i-- {
-		properDivisors = append(properDivisors, n / properDivisors[i])
+		properDivisors = properDivisors[:len(properDivisors)-1]
 	}
 	return
 }
