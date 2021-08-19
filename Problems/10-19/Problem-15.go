@@ -17,7 +17,7 @@ func main() {
 
 func countRoutes(n int) int {
 	n++
-	grid := make([][]int, n) 
+	grid := make([][]int, n)
 	for i := range grid {
 		grid[i] = make([]int, n)
 	}

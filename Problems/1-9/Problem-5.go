@@ -8,7 +8,7 @@ package main
 import "fmt"
 
 func main() {
-	for i := 20; ; i++{
+	for i := 20; ; i++ {
 		if isDivisibleUpTo(i, 20) {
 			fmt.Println(i)
 			break
@@ -18,7 +18,7 @@ func main() {
 
 func isDivisibleUpTo(num, limit int) bool {
 	for i := 2; i <= limit; i++ {
-		if num % i != 0 {
+		if num%i != 0 {
 			return false
 		}
 	}

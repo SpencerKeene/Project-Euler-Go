@@ -17,26 +17,26 @@ package main
 import "fmt"
 
 const (
-	SUNDAY = 0
-	MONDAY = 1
-	TUESDAY = 2
+	SUNDAY    = 0
+	MONDAY    = 1
+	TUESDAY   = 2
 	WEDNESDAY = 3
-	THURSDAY = 4
-	FRIDAY = 5
-	SATURDAY = 6
+	THURSDAY  = 4
+	FRIDAY    = 5
+	SATURDAY  = 6
 
-	JANUARY = 0
-	FEBRUARY = 1
-	MARCH = 2
-	APRIL = 3
-	MAY = 4
-	JUNE = 5
-	JULY = 6
-	AUGUST = 7
+	JANUARY   = 0
+	FEBRUARY  = 1
+	MARCH     = 2
+	APRIL     = 3
+	MAY       = 4
+	JUNE      = 5
+	JULY      = 6
+	AUGUST    = 7
 	SEPTEMBER = 8
-	OCTOBER = 9
-	NOVEMBER = 10
-	DECEMBER = 11
+	OCTOBER   = 9
+	NOVEMBER  = 10
+	DECEMBER  = 11
 )
 
 func main() {
@@ -56,8 +56,8 @@ func main() {
 }
 
 func isLeapYear(year int) bool {
-	if year % 4 == 0 {
-		return year % 100 != 0 || year % 400 == 0
+	if year%4 == 0 {
+		return year%100 != 0 || year%400 == 0
 	}
 	return false
 }

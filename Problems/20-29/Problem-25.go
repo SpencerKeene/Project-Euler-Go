@@ -54,23 +54,22 @@ func add(num1, num2 []int) []int {
 	if len(num1) > len(num2) {
 		num1, num2 = num2, num1
 	}
-	
+
 	var (
-		carry int
+		carry  int
 		result []int
 	)
 	for len(num1) > 0 {
-		digit1 := num1[len(num1) - 1]
-		digit2 := num2[len(num2) - 1]
+		digit1 := num1[len(num1)-1]
+		digit2 := num2[len(num2)-1]
 
 		sum := digit1 + digit2 + carry
 		result = append([]int{sum % 10}, result...)
 		carry = sum / 10
 
-		num1 = num1[:len(num1) - 1]
-		num2 = num2[:len(num2) - 1]
+		num1 = num1[:len(num1)-1]
+		num2 = num2[:len(num2)-1]
 	}
-
 
 	if carry != 0 {
 		num2 = add(num2, []int{carry})

@@ -24,14 +24,14 @@ func main() {
 func multiplyBy2(num string) (result string) {
 	var carry byte
 	for i := range num {
-		digit := num[len(num) - 1 - i] - '0'
-		curr := digit * 2 + carry
-		
-		result = string(curr % 10 + '0') + result
+		digit := num[len(num)-1-i] - '0'
+		curr := digit*2 + carry
+
+		result = string(curr%10+'0') + result
 		carry = curr / 10
 	}
 	if carry != 0 {
-		result = string(carry + '0') + result
+		result = string(carry+'0') + result
 	}
 	return
 }

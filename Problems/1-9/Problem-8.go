@@ -37,12 +37,12 @@ func main() {
 	`, "\n\t", "")
 
 	max := 0
-	for i := 0; i <= len(series) - 13; i++ {
+	for i := 0; i <= len(series)-13; i++ {
 		product := 1
 		for j := 0; j < 13; j++ {
-			product *= int(series[i + j] - '0')
+			product *= int(series[i+j] - '0')
 		}
-		
+
 		if product > max {
 			max = product
 		}

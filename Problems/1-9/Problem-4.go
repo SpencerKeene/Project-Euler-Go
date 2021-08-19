@@ -10,7 +10,7 @@ import "fmt"
 func main() {
 	max := 0
 	for first := 999; first >= 100; first-- {
-		for second := first; second >= 100; second -- {
+		for second := first; second >= 100; second-- {
 			num := first * second
 			if isPalindrome(num) && num > max {
 				max = num

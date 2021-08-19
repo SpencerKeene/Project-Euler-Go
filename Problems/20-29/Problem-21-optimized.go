@@ -27,14 +27,14 @@ func main() {
 	sum /= 2
 
 	fmt.Println("The sum of all amicable numbers below 10000 is", sum)
-	
+
 	fmt.Println("The program completed in", time.Since(start))
 }
 
 func d(n int) (sum int) {
 	sqrt := math.Sqrt(float64(n))
 	for i := 1; i < int(sqrt); i++ {
-		if n % i == 0 {
+		if n%i == 0 {
 			sum += i
 			sum += n / i
 		}

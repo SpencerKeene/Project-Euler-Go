@@ -46,7 +46,7 @@ func main() {
 	cost[0][0] = triangle[0][0]
 	for i := 1; i < len(triangle); i++ {
 		cost[i][0] = triangle[i][0] + cost[i-1][0]
-		last := len(triangle[i])-1
+		last := len(triangle[i]) - 1
 		cost[i][last] = triangle[i][last] + cost[i-1][last-1]
 
 		for j := 1; j < last; j++ {

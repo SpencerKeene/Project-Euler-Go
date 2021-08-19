@@ -23,8 +23,8 @@ func main() {
 	}
 
 	total := 0
-	INTEGER_LOOP:
-	for i := 1; i <= 28123 ; i++ {
+INTEGER_LOOP:
+	for i := 1; i <= 28123; i++ {
 		for abNum := range abundantNums {
 			required := i - abNum
 			if _, ok := abundantNums[required]; ok {
@@ -54,14 +54,14 @@ func properDivisors(x int) []int {
 	divisors := []int{1}
 
 	for i := 2; i <= int(sqrt); i++ {
-		if x % i == 0 {
-			divisors = append(divisors, i, x / i)
+		if x%i == 0 {
+			divisors = append(divisors, i, x/i)
 		}
 	}
-	
+
 	if sqrt == float64(int(sqrt)) {
 		divisors = divisors[:len(divisors)-1]
 	}
-	
+
 	return divisors
 }

@@ -18,7 +18,7 @@ import (
 	"math"
 )
 
-type power struct{
+type power struct {
 	base, exponent int
 }
 
@@ -32,7 +32,7 @@ func main() {
 		}
 	}
 
-	count := (LIMIT - 1) * (LIMIT - 1) - len(duplicates)
+	count := (LIMIT-1)*(LIMIT-1) - len(duplicates)
 
 	fmt.Printf("There are %d distinct terms\n", count)
 }
@@ -50,7 +50,7 @@ func addDuplicates(duplicates map[power]struct{}, limit, base, exp int) {
 		expProduct := exp * secondExp
 
 		for dupExp := secondExp + 1; dupExp <= limit; dupExp++ {
-			if expProduct % dupExp == 0 {
+			if expProduct%dupExp == 0 {
 				tempExp := expProduct / dupExp
 				dupBase := int(pow(base, tempExp))
 				duplicates[power{dupBase, dupExp}] = struct{}{}
