@@ -57,11 +57,11 @@ func countLetters(num int) int {
 		return letters[num]
 	case num == 1000:
 		return len("one") + len("thousand")
-	case num >= 100 && num % 100 == 0:
-		return letters[num / 100] + len("hundred")
+	case num >= 100 && num%100 == 0:
+		return letters[num/100] + len("hundred")
 	case num >= 100:
-		return letters[num / 100] + len("hundred") + len("and") + countLetters(num % 100)
+		return letters[num/100] + len("hundred") + len("and") + countLetters(num%100)
 	default:
-		return letters[num / 10 * 10] + letters[num % 10]
+		return letters[num/10*10] + letters[num%10]
 	}
 }

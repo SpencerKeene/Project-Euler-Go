@@ -31,9 +31,9 @@ func getPermutations(str string) []string {
 		str = swapCharsInString(str, 0, i)
 
 		for _, temp := range getPermutations(str[1:]) {
-			perms = append(perms, str[:1] + temp)
+			perms = append(perms, str[:1]+temp)
 		}
-		
+
 		str = swapCharsInString(str, 0, i)
 	}
 	return perms

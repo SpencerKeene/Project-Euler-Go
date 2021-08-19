@@ -26,7 +26,7 @@ func fibonacci() (fib []int) {
 
 func sumEvens(nums []int) (sum int) {
 	for _, x := range nums {
-		if x % 2 == 0 {
+		if x%2 == 0 {
 			sum += x
 		}
 	}

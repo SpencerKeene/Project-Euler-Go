@@ -40,10 +40,10 @@ func reciprocalCycleLength(divisor int) int {
 		if firstIndex, ok := remainderIndices[remainder]; ok {
 			return currIndex - firstIndex
 		}
-		
+
 		remainderIndices[remainder] = currIndex
 		dividend = remainder * 10
 	}
-	
+
 	return 0
 }

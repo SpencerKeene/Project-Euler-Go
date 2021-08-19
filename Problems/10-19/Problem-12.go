@@ -34,14 +34,14 @@ func main() {
 			break
 		}
 	}
-	
+
 	fmt.Println(triangleNum, "has", factors, "factors")
 }
 
 func countFactors(num int) (count int) {
 	sqrt := math.Sqrt(float64(num))
 	for i := 1; i <= int(sqrt); i++ {
-		if num % i == 0  {
+		if num%i == 0 {
 			count += 2
 		}
 	}

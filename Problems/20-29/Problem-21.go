@@ -37,7 +37,7 @@ func main() {
 	}
 
 	fmt.Println("The sum of all amicable numbers below 10000 is", sum)
-	
+
 	fmt.Println("The program completed in", time.Since(start))
 }
 
@@ -54,11 +54,11 @@ func getProperDivisors(n int) (properDivisors []int) {
 	properDivisors = []int{1}
 
 	for i := 2; i <= int(sqrt); i++ {
-		if n % i == 0 {
-			properDivisors = append(properDivisors, i, n / i)
+		if n%i == 0 {
+			properDivisors = append(properDivisors, i, n/i)
 		}
 	}
-	
+
 	if sqrt == float64(int(sqrt)) {
 		properDivisors = properDivisors[:len(properDivisors)-1]
 	}

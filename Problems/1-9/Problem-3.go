@@ -19,7 +19,7 @@ func main() {
 func largestPrimeFactor(num int) int {
 	limit := int(math.Sqrt(float64(num)))
 	for curr := 2; curr < limit; curr++ {
-		if num % curr == 0 {
+		if num%curr == 0 {
 			num /= curr
 			limit = int(math.Sqrt(float64(num)))
 			curr--

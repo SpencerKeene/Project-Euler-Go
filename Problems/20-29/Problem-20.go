@@ -12,7 +12,6 @@ import (
 	"fmt"
 )
 
-
 func main() {
 	factorial := []int{1}
 	for i := 2; i <= 100; i++ {
@@ -30,7 +29,7 @@ func main() {
 func multiply(num []int, x int) (result []int) {
 	var carry int
 	for i := range num {
-		product := num[len(num) - 1 - i] * x + carry
+		product := num[len(num)-1-i]*x + carry
 		result = append([]int{product % 10}, result...)
 		carry = product / 10
 	}

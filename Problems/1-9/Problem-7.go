@@ -16,15 +16,15 @@ func main() {
 }
 
 func sieveOfEratosthenes(n int) []int {
-	isPrime := make([]bool, n + 1)
+	isPrime := make([]bool, n+1)
 	for i := 2; i <= n; i++ {
-		isPrime[i] = true;
+		isPrime[i] = true
 	}
 
 	limit := int(math.Sqrt(float64(n)))
 	for i := 2; i <= limit; i++ {
 		if isPrime[i] {
-			for j := i*2; j <= n ; j += i {
+			for j := i * 2; j <= n; j += i {
 				isPrime[j] = false
 			}
 		}

@@ -31,7 +31,7 @@ type coefficients struct {
 
 func main() {
 	var (
-		maxN int
+		maxN     int
 		maxCoeff coefficients
 	)
 	for a := -999; a < 1000; a++ {
@@ -48,18 +48,18 @@ func main() {
 	}
 
 	fmt.Printf("The coefficients a = %d and b = %d produce %d consecutive primes\n", maxCoeff.a, maxCoeff.b, maxN)
-	fmt.Printf("Their product is %d\n", maxCoeff.a * maxCoeff.b)
+	fmt.Printf("Their product is %d\n", maxCoeff.a*maxCoeff.b)
 }
 
 func quadraticExpression(c coefficients) func(int) int {
 	a, b := c.a, c.b
 	return func(n int) int {
-		return n * n + a * n + b
+		return n*n + a*n + b
 	}
 }
 
 func consecutivePrimesGenerated(f func(int) int) (n int) {
-	for (isPrime(f(n))) {
+	for isPrime(f(n)) {
 		n++
 	}
 	return
@@ -72,7 +72,7 @@ func isPrime(x int) bool {
 
 	sqrt := int(math.Sqrt(float64(x)))
 	for i := 2; i < sqrt; i++ {
-		if x % i == 0 {
+		if x%i == 0 {
 			return false
 		}
 	}

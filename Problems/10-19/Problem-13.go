@@ -7,8 +7,6 @@ package main
 
 import "fmt"
 
-
-
 func main() {
 	numbers := [100]string{
 		"37107287533902102798797998220837590246510135740250",
@@ -134,15 +132,15 @@ func addNums(num1, num2 string) (sum string) {
 
 	var carry byte
 	for i := 0; i < len(num1); i++ {
-		digit1 := num1[len(num1) - 1 - i] - '0'
-		digit2 := num2[len(num2) - 1 - i] - '0'
+		digit1 := num1[len(num1)-1-i] - '0'
+		digit2 := num2[len(num2)-1-i] - '0'
 		currSum := digit1 + digit2 + carry
-		
-		sum = string(currSum % 10 + '0') + sum
+
+		sum = string(currSum%10+'0') + sum
 		carry = currSum / 10
 	}
-	
-	remainingNum2 := num2[:len(num2) - len(num1)]
+
+	remainingNum2 := num2[:len(num2)-len(num1)]
 	if carry != 0 {
 		remainingCarry := string(carry + '0')
 		sum = addNums(remainingCarry, remainingNum2) + sum
@@ -150,5 +148,5 @@ func addNums(num1, num2 string) (sum string) {
 		sum = remainingNum2 + sum
 	}
 
-	return 
+	return
 }
